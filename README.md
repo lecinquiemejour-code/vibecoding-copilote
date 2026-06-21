@@ -58,6 +58,9 @@ le contenu d'un skill avant de l'activer.** Celui-ci ne contient que du
 code et lance des commandes (serveur local, `git`) dans *votre* projet — mais
 toujours après votre accord explicite (les GO), jamais de lui-même.
 
-## Auteur & licence
+## Auteur & usage
 
-Créé par [Jean Noël Lefebvre (L5J)](https://cv-jean-noel.netlify.app/). Distribué sous licence **GNU GPL v3.0** (voir `LICENSE`).
+Créé par [Jean Noël Lefebvre (L5J)](https://cv-jean-noel.netlify.app/).
+
+© Jean Noël Lefebvre — Le Cinquième Jour. Tous droits réservés.
+Ce skill est mis à disposition pour un **usage pédagogique** (notamment dans le cadre du bootcamp VibeCoding). Sa reproduction, sa modification et sa rediffusion publiques sont soumises à l'autorisation de l'auteur.
