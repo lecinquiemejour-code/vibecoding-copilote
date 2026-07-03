@@ -29,6 +29,15 @@ Une bonne feature-unité est : **petite** (réalisable en un cycle), **testable 
 |---|---------|---------------------------|------|
 | ... | [...] | [...] | [...] |
 
+## Couverture du PRD
+
+> Vérification de complétude, **dans les deux sens** : chaque exigence du PRD (Must have + spécifications visuelles/sonores) est mappée vers une feature, ou explicitement non couverte (avec raison). Aucune omission silencieuse.
+
+| Exigence du PRD | Couverte par | Si non couverte : raison |
+|-----------------|--------------|--------------------------|
+| [...] | F[n] | — |
+| [...] | — | [reportée / écartée car ...] |
+
 ## Hors périmètre (« Won't have »)
 
 > Rappel des exclusions du PRD — pour ne pas dériver.

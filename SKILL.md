@@ -48,7 +48,7 @@ Cherche un `PRD.md` (ou un fichier de PRD clairement nommé) dans le dossier du 
 
 ### 2. Calibrer le registre — demande le profil
 
-Avant tout, une **seule** question d'accueil, deux choix sur deux lignes :
+Avant tout, une **seule** question d'accueil, deux choix sur deux lignes. **Elle se pose seule, dans son propre message, et tu attends la réponse avant d'aller plus loin** — jamais dans le même message que la carte du voyage ou le GO d'entrée : deux menus lettrés actifs en même temps rendent une réponse d'une seule lettre (« A ») indécidable. Les étiquettes **(1)/(2)** sont réservées au profil ; les lettres (A)/(B)… aux GO et aux choix d'options :
 
 > Avant qu'on attaque, dis-moi où tu te situes — je réglerai ma façon d'expliquer :
 >
@@ -106,7 +106,7 @@ Tu n'interviewes pas l'utilisateur sur ce que le PRD tranche déjà. Pour chaque
 
 > **Règle de visibilité — non négociable.** Ne dis jamais « le document est prêt » ou « je l'ai mis dans `X.md` » sans avoir réellement créé le fichier *et* rendu son contenu visible. Tout livrable de cadrage est un **vrai fichier**, pas une description dans le chat. (Même esprit que la section « génère les fichiers » de `vibecoding-prd`.)
 
-**Exception : `archi-stack.md`.** Ne propose jamais un jet unique imposé. Présente **2 à 3 approches techniques** (architecture + stack), étiquetées (A)/(B)/(C), avec pour chacune : à quoi elle sert, ses avantages, ses inconvénients, et ta recommandation argumentée. **Attends le choix de l'utilisateur**, puis écris et montre le document avec l'approche retenue figée.
+**Exception : `archi-stack.md`.** Ne propose jamais un jet unique imposé. Présente **2 à 3 approches techniques** (architecture + stack), étiquetées (A)/(B)/(C), avec pour chacune : à quoi elle sert, ses avantages, ses inconvénients, **ses prérequis réels d'installation** (ex. `npx serve` exige Node.js — ne promets jamais « rien à installer » si la commande de lancement le contredit), et ta recommandation argumentée. Chaque approche du menu doit être **réellement défendable** : si tu la qualifies toi-même d'« usine à gaz » ou de « contraire au PRD », elle n'a pas sa place dans le menu — mentionne-la en note et propose une alternative crédible. Ne place pas systématiquement la recommandation en (A). **Attends le choix de l'utilisateur**, puis écris et montre le document avec l'approche retenue figée.
 
 ### Dépôt du garde-fou — `CLAUDE.md`
 
@@ -116,6 +116,8 @@ Avant de construire (idéalement en début de Phase 1), traite le `CLAUDE.md` :
 
 - **S'il existe déjà** dans le projet → **ne l'écrase pas**. Lis-le, signale qu'il sera la référence, et propose seulement d'y **ajouter ce qui manque** pour la méthode si la « Règle 0 » n'y figure pas.
 - **S'il manque** → dépose le gabarit standard depuis `assets/CLAUDE.md`, **montre-le à l'utilisateur** (ne le pose pas « en coulisse »), puis **adapte-le au projet** (par ex. inscrire les vrais noms de fichiers/librairies à ne pas toucher).
+
+**Cette vérification laisse une trace visible.** Avant de présenter le premier document de cadrage, rends compte du résultat en une ligne (« `CLAUDE.md` présent, Règle 0 en place ✓ » — ou ce qui a été déposé/complété). Une étape annoncée puis exécutée en silence est indistinguable d'une étape sautée.
 
 Dans tous les cas, le `CLAUDE.md` doit porter en tête une **« Règle 0 » synthétique** qui inscrit la méthode (cycle PDCA par feature · Plan → GO #1 → Do → Check local → GO #2 → commit **local** · mise en ligne Netlify en étape finale unique · non-régression au feeling) et **renvoie à `references/methode-pdca.md`** pour le détail. Le cours complet vit à un seul endroit ; les règles n'en gardent que l'essentiel exécutable.
 
@@ -129,9 +131,15 @@ Dans tous les cas, le `CLAUDE.md` doit porter en tête une **« Règle 0 » synt
 
 > **Checkpoint « découpe » — non négociable.** Le passage du PRD (souvent 1 ou 2 fonctionnalités) à une liste de features techniques (souvent plus nombreuses) est une **décision de design**, pas une formalité. Quand tu présentes le `fdd.md` puis le `plan-action.md`, **affiche explicitement la liste des features et leur priorité (Must / Could)**, explique **d'où vient chaque feature ajoutée** par rapport au PRD, et **fais confirmer le découpage**. L'utilisateur ne doit jamais découvrir « N features » comme un fait accompli.
 
+> **Passe de couverture — dans les deux sens.** Justifier la provenance des features incluses ne suffit pas : vérifie aussi la **complétude**. Chaque exigence du PRD (les *Must have*, mais aussi chaque élément des spécifications visuelles et sonores) doit être soit **mappée vers une feature**, soit **explicitement listée comme non couverte** (reportée ou écartée, avec la raison). Remplis le tableau « Couverture du PRD » du gabarit `fdd.md` et fais valider les exclusions en même temps que le découpage — jamais d'omission silencieuse.
+
 ### Sas de bascule
 
-Quand le `plan-action.md` est posé et validé, le cadrage est terminé. **Marque la fin de la Phase 1** par un sas appuyé sur le plan d'action, et **attends un GO** avant d'entrer dans la boucle :
+Quand le `plan-action.md` est posé et validé, le cadrage est terminé.
+
+**Vérification d'engagement (anti « click-through »).** Avant de demander le GO du sas, pose une unique question de réancrage : demande à l'utilisateur d'**ouvrir `plan-action.md`** et de citer le **critère de réussite de la première feature**. S'il ne le retrouve pas, guide-le — le but n'est pas de le piéger, mais de garantir qu'au moins un document de cadrage a été réellement ouvert avant d'entrer dans la construction.
+
+**Marque ensuite la fin de la Phase 1** par un sas appuyé sur le plan d'action, et **attends un GO** avant d'entrer dans la boucle :
 
 > « Cadrage terminé — les quatre documents sont **validés**. Je commence par les mettre à l'abri avec un **commit de cadrage** (enregistrement local uniquement, rien ne part en ligne). Ensuite, le plan d'action compte **N features**, dans cet ordre. On démarre par la première : *[nom de la feature]*. **Ce GO lance la _planification_ de cette feature : je te proposerai 3 options avant d'écrire la moindre ligne de code.** On y va ? »
 
@@ -148,7 +156,7 @@ N'entre en Phase 2 qu'après ce GO — et précise bien qu'il **n'autorise pas e
 Le `plan-action.md` est le **fil conducteur** : il dit par où commencer, où on en est, et quand s'arrêter. À chaque tour :
 
 1. **Choix de la feature.** Lis le `plan-action.md`, prends la première feature « à faire » dans l'ordre de priorité. Marque-la **« en cours »**.
-2. **PLAN.** Propose **3 options d'implémentation** conformes aux RULES, en expliquant ton raisonnement (calibré sur le profil). Tu décris le *comment* de cette feature ; tu n'écris rien encore. Les 3 options sont **réellement défendables et assez spécifiées pour être codées telles quelles** — jamais d'option-figurante listée pour être aussitôt « écartée » (une approche indéfendable se mentionne en note, hors menu). Recommandes-en une en argumentant, mais **ne place pas systématiquement la recommandation en (A)** : une position prévisible pousse à répondre « A » mécaniquement.
+2. **PLAN.** Propose **3 options d'implémentation** conformes aux RULES, en expliquant ton raisonnement (calibré sur le profil). Tu décris le *comment* de cette feature ; tu n'écris rien encore. Les 3 options sont **réellement défendables et assez spécifiées pour être codées telles quelles** — jamais d'option-figurante listée pour être aussitôt « écartée » (une approche indéfendable se mentionne en note, hors menu). Recommandes-en une en argumentant, mais **ne place pas systématiquement la recommandation en (A)** : une position prévisible pousse à répondre « A » mécaniquement. Test simple : si tu t'apprêtes à qualifier une option d'« écartée », d'« usine à gaz » ou de « hors périmètre », elle n'a pas sa place dans le menu — remplace-la par une option crédible.
 3. **🛑 GO #1.** Attends la validation humaine. **Formule le GO en disant clairement ce qu'il autorise (écrire le code de _cette_ feature, en local) et ce qu'il n'autorise pas (ni enregistrement, ni mise en ligne).** Sans GO, pas de code. Un refus = tu révises la proposition.
    - **Menu canonique du GO — une lettre par option, jamais de panier « je préfère B ou C ».** Le menu reprend chaque option d'implémentation du PLAN sous sa propre lettre, plus une dernière entrée pour les questions :
      > **(A)** GO avec l'option A · **(B)** GO avec l'option B · **(C)** GO avec l'option C · **(D)** J'ai une question / je veux ajuster
