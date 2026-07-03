@@ -1,6 +1,6 @@
 # FDD — Décomposition en features — [Nom du projet]
 
-> **Version** 0.1 · **Date** [date] · **Méthodologie** VibeCoding PDCA
+> **Version** 0.1 · **Date** [date] · **Statut** brouillon | validé le [date] · **Méthodologie** VibeCoding PDCA
 > Traduit les fonctionnalités du PRD (table MoSCoW) en **features-unités de construction** — des morceaux assez petits pour tenir dans un cycle PDCA chacun.
 > Dérivé du PRD **et** de l'architecture retenue (la façon de découper dépend de la stack).
 
@@ -14,6 +14,7 @@ Une bonne feature-unité est : **petite** (réalisable en un cycle), **testable 
 ## Features issues des « Must have »
 
 > Le cœur de la v1. Ce sont elles qui peupleront le plan d'action en priorité.
+> Pour une app web, inclure la **favicon** dès la feature-squelette : évite un 404 permanent en console qui parasite tous les CHECK.
 
 | # | Feature (`action résultat objet`) | Issue de (PRD) | Note |
 |---|-----------------------------------|----------------|------|

@@ -23,6 +23,8 @@ PRD  →  archi-stack  →  fdd  →  plan-action
 
 Le `CLAUDE.md` (fichier de règles canonique) surplombe ces documents : il est consulté **en continu** pendant toute la boucle.
 
+Le cadrage se termine par un **commit de cadrage** : `git init` si besoin, création d'un **`.gitignore`** (dossier du skill, fichiers de travail étrangers à l'app), puis commit des documents validés. C'est le point de reprise propre de tout le projet — les commits suivants restent ainsi purs (une feature = un commit). Sous Windows, expliquer **une fois** les warnings `LF will be replaced by CRLF` : une normalisation des fins de ligne, pas une erreur.
+
 **Boucle d'exécution (à chaque tour = une feature).** Le cœur de la méthode, détaillé ci-dessous.
 
 ## La boucle, tour par tour
@@ -51,6 +53,15 @@ Trois actions engagent à des degrés différents, chacune sa porte :
 - **GO MISE EN LIGNE** protège la **publication** : c'est l'unique moment où le code quitte la machine pour internet. Il n'arrive **qu'une fois**, en fin de projet (voir « Clôture du chantier »).
 
 Rien d'irréversible — et surtout rien de public — ne se produit sans une approbation humaine explicite.
+
+### La voie « micro-tâche » — garder la cérémonie à la bonne taille
+
+La cérémonie complète (PLAN à 3 options) vaut pour les choix structurants. Deux cas allégés :
+
+- **Micro-tâche** : demande triviale hors feature en cours (quelques lignes, zéro impact d'architecture — ex. une favicon manquante). L'agent signale que c'est hors périmètre, décrit le changement en une phrase, demande **un GO simple** (pas de 3 options), exécute, puis rattache le changement au commit du tour en cours (mentionné dans le message de commit et les notes du plan-action).
+- **Correction cosmétique après un CHECK KO** : si le KO porte sur un réglage de surface (couleur, taille, position…) sans remise en cause de l'approche, le retour au PLAN se fait avec **une proposition unique**. Le GO #1 reste obligatoire.
+
+Dans les deux cas, les trois portes ne bougent pas : GO avant d'écrire, GO avant de committer, GO unique de mise en ligne.
 
 ## La passe périodique — non-régression (en local)
 
@@ -81,7 +92,7 @@ Le contexte de l'agent s'efface entre deux sessions ; le `plan-action.md`, lui, 
                  │  CADRAGE : PRD → archi-stack → fdd →  │
                  │            plan-action  (+ CLAUDE.md) │
                  └───────────────────┬──────────────────┘
-                                     │  (sas + GO)
+                                     │  (sas + GO + commit de cadrage)
                                      ▼
    ┌─────────────────── BOUCLE PDCA (par feature) ───────────────────┐
    │  lire plan-action → PLAN (3 options/règles)                      │

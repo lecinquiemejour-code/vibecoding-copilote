@@ -1,7 +1,7 @@
 # Plan d'action — [Nom du projet]
 
 > **Document vivant** — mis à jour à **chaque tour** de la boucle PDCA. Son état doit toujours refléter la réalité du dépôt.
-> **Méthodologie** VibeCoding PDCA · **Dernière mise à jour** [date]
+> **Méthodologie** VibeCoding PDCA · **Statut cadrage** brouillon | validé le [date] · **Dernière mise à jour** [date]
 
 ## Comment lire / tenir ce document
 
@@ -18,6 +18,8 @@
 | 2 | [...] | à faire | [...] | [...] |
 | 3 | [...] | à faire | [...] | [...] |
 | — | **Déploiement Netlify** (mise en ligne — après la dernière feature) | à faire | site accessible à l'URL publique, vérifié par l'utilisateur | [...] |
+
+> Formuler les critères de console comme « aucune erreur **liée à notre code** » : le navigateur génère du bruit bénin (ex. 404 sur la favicon) qui ne doit pas invalider un CHECK.
 
 ## Journal des passes de non-régression
 

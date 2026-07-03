@@ -1,6 +1,6 @@
 # Architecture & Stack — [Nom du projet]
 
-> **Version** 0.1 · **Date** [date] · **Statut** Figé après choix · **Méthodologie** VibeCoding PDCA
+> **Version** 0.1 · **Date** [date] · **Statut** brouillon | validé le [date] (figé après choix) · **Méthodologie** VibeCoding PDCA
 > Dérivé du PRD. Décrit le *comment* technique. Une fois l'approche choisie, ce document est stable.
 
 ## Approche retenue
@@ -21,9 +21,10 @@
 
 ## Lancement local
 
-**Commande :** `[npm run dev / npx serve / python -m http.server …]` · **Port :** `[ex. 5173 / 8080]`
+**Commande :** `[npm run dev / npx serve / python -m http.server …]` · **Port :** `[ex. 5173 / 8080]` · **Prérequis :** `[Node.js / Python / rien — ce que la commande exige réellement]`
 
 > Commande et port **figés** ici : réutilisés **à l'identique** à chaque CHECK (test en local par l'utilisateur). Évite la dérive d'un port à l'autre d'un tour sur l'autre.
+> **Cohérence obligatoire :** ne jamais vanter une approche « sans outil X » si la commande de lancement l'exige (ex. `npx serve` exige Node.js). Les prérequis annoncés dans les avantages de l'approche et ceux de cette commande doivent coïncider.
 
 ## Architecture en bref
 

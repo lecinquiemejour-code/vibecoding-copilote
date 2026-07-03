@@ -46,7 +46,7 @@ Avant de demander le GO, explique ton raisonnement de façon pédagogique. Avant
 Décompose chaque tâche complexe en étapes petites et séquentielles.
 
 ### Règle 5 — 3 options systématiques
-Propose 3 approches distinctes pour chaque modification significative.
+Propose 3 approches distinctes pour chaque modification significative. *(Exception : micro-tâche triviale ou correction cosmétique après KO → une proposition unique et un GO simple suffisent — voir la doc de méthode.)*
 
 ### Règle 6 — Plan d'action avant le code
 Rédige un plan d'action détaillé avant chaque génération de code.
