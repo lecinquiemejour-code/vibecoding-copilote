@@ -58,9 +58,15 @@ le contenu d'un skill avant de l'activer.** Celui-ci ne contient que du
 code et lance des commandes (serveur local, `git`) dans *votre* projet — mais
 toujours après votre accord explicite (les GO), jamais de lui-même.
 
-## Auteur & usage
+## Auteur, licence & usage
 
-Créé par [Jean Noël Lefebvre (L5J)](https://cv-jean-noel.netlify.app/).
+Créé par [Jean Noël Lefebvre (L5J)](https://cv-jean-noel.netlify.app/) — © Jean Noël Lefebvre, Le Cinquième Jour.
 
-© Jean Noël Lefebvre — Le Cinquième Jour. Tous droits réservés.
-Ce skill est mis à disposition pour un **usage pédagogique** (notamment dans le cadre du bootcamp VibeCoding). Sa reproduction, sa modification et sa rediffusion publiques sont soumises à l'autorisation de l'auteur.
+[![Licence : CC BY-NC-SA 4.0](https://img.shields.io/badge/Licence-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)
+
+Ce skill (méthode, gabarits et documentation) est publié sous licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr) :
+
+- **Usage non commercial** (personnel, éducatif, associatif) : **libre** — utilisez, copiez, adaptez et rediffusez, à condition de **créditer l'auteur** et de **partager vos adaptations sous la même licence**.
+- **Usage commercial** (formation facturée, prestation, intégration à une offre payante…) : soumis à une **licence commerciale séparée** — contactez **Le Cinquième Jour** : <lecinquiemejour@gmail.com>.
+
+Texte complet de la licence : voir [LICENSE](LICENSE).
