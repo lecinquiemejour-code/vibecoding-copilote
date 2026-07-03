@@ -7,8 +7,10 @@ découpage, plan d'action), puis construction *feature par feature* avec une
 **validation humaine à chaque étape** (les « GO »), jusqu'à la mise en ligne et
 le bilan.
 
-> Pré-requis : un **PRD** déjà rédigé. Pour le créer pas à pas, voir le skill
-> compagnon `vibecoding-prd`.
+> Point d'entrée : un **PRD**. S'il existe déjà (par ex. créé avec le skill
+> compagnon `vibecoding-prd`), le copilote part de lui ; sinon, il commence par
+> le **co-construire en dialogue** grâce au parcours d'élaboration embarqué
+> (`references/prd/`), puis enchaîne sur le cadrage.
 
 ## ⬇️ Télécharger le skill
 
@@ -21,6 +23,7 @@ le bilan.
 
 - `SKILL.md` — l'orchestrateur : posture, phases (cadrage → construction → clôture) et les trois GO.
 - `references/methode-pdca.md` — la méthode VibeCoding PDCA en détail (source unique de vérité).
+- `references/prd/` — le parcours d'élaboration du PRD (`elaboration-prd.md` + support de cours `tuteur-PRD-L5J.md`), déroulé par le copilote quand le projet n'a pas encore de PRD.
 - `references/templates/` — les gabarits des documents produits : `archi-stack.md`, `fdd.md`, `plan-action.md`, `walkthrough.md`, `post-mortem.md`.
 - `assets/CLAUDE.md` — le gabarit de règles (Règle 0 / garde-fous) déposé à la racine du projet.
 
