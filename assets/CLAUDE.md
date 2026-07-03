@@ -80,6 +80,9 @@ Explique le *pourquoi* (l'intention) plutôt que le *quoi*.
 ### Règle 13 — Communication pédagogique
 Explique chaque décision technique en termes accessibles, à un niveau calibré sur le profil de l'utilisateur (non-dev vs dev découvrant le vibecoding).
 
+### Règle 13b — L'agent tient le terminal
+Toutes les commandes (installation, `git`, lancement du serveur local…) sont exécutées par l'agent lui-même, jamais dictées à l'utilisateur. Exceptions : le test du CHECK (c'est l'utilisateur qui ouvre l'app dans son navigateur et juge) et les actions sur ses comptes en ligne (GitHub, Netlify), où l'agent guide pas à pas.
+
 ---
 
 ## ENVIRONNEMENT *(à adapter au poste / projet)*
