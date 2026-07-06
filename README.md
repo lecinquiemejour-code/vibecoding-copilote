@@ -17,7 +17,7 @@ le bilan.
 1. Sur la page d'accueil de ce dépôt GitHub, cliquez sur le bouton vert **`<> Code`**.
 2. Cliquez sur **`Download ZIP`**.
 
-*(Note : pour l'app Claude et Claude Desktop, le fichier `.zip` sert directement de package — ne l'extrayez pas. Pour un agent de code (Claude Code, Cursor, Antigravity…), c'est l'inverse : on l'extrait à la racine du projet — voir **Installation**).*
+*(Note : le fichier `.zip` s'utilise tel quel, sans l'extraire vous-même : package à téléverser pour l'app Claude et Claude Desktop, fichier à déposer à la racine du projet pour un IDE de Vibecoding — c'est l'agent qui l'extraira. Voir **Installation**).*
 
 ## Contenu du dépôt
 
@@ -38,10 +38,10 @@ le bilan.
 
 > Prérequis : l'**exécution de code** doit être activée dans vos préférences (Settings → Capabilities).
 
-### Dans un agent de code (Claude Code, Cursor, Antigravity…)
+### Dans un IDE de Vibecoding (Claude Code, Cursor, Antigravity…)
 
 1. Téléchargez le fichier ZIP du dépôt (voir **Télécharger le skill** ci-dessus).
-2. Extrayez-le **à la racine de votre dossier de projet**, en conservant son dossier (typiquement `vibecoding-copilote-main/`) — ne mélangez pas son contenu avec les fichiers du projet.
+2. Déposez le fichier `.zip` tel quel **à la racine de votre dossier de projet** — sans l'extraire : c'est l'agent qui s'en chargera.
 3. Ouvrez le dossier du projet dans votre agent, puis collez le **prompt de démarrage** (ou de **reprise**) ci-dessous.
 
 ## Démarrer ou reprendre un projet
@@ -51,15 +51,9 @@ le bilan.
 Collez ce prompt dans l'agent, tel quel :
 
 ```text
-Cherche dans ce projet le fichier `SKILL.md` du skill VibeCoding Copilote
-(dans un dossier nommé `vibecoding-copilote`, `vibecoding-copilote-main`
-si extrait d'un ZIP GitHub, ou directement à la racine). Lis-le et
-déroule-le fidèlement : tu es le copilote VibeCoding (Le Cinquième Jour),
-et ce fichier est ton mode d'emploi complet, avec ses références dans
-le sous-dossier `references/` situé à côté de lui.
-
-Commence par la Phase 0 : cherche un PRD dans le projet (co-construis-le
-avec moi s'il n'existe pas), présente-toi, puis pose ta question de calibrage.
+Le skill VibeCoding Copilote est à la racine de ce projet, sous forme de
+ZIP (extrais-le dans son propre dossier) ou de dossier déjà extrait.
+Lis son `SKILL.md` et déroule-le fidèlement, en commençant par la Phase 0.
 ```
 
 ### Reprise d'un projet déjà entamé (avec la méthode)
@@ -70,23 +64,10 @@ le chantier, collez ce prompt :
 
 ```text
 Ce projet est déjà en cours et suit la méthode VibeCoding PDCA.
-
-Cherche dans ce projet le fichier `SKILL.md` du skill VibeCoding Copilote
-(dans un dossier nommé `vibecoding-copilote`, `vibecoding-copilote-main`
-si extrait d'un ZIP GitHub, ou directement à la racine). Lis-le — en
-particulier sa section « Reprise de session » — ainsi que le fichier de
-règles à la racine (`CLAUDE.md` / `AGENTS.md` / `.clinerules`) : tu es
-le copilote VibeCoding qui reprend le chantier.
-
-Ne refais pas le cadrage. Relis dans l'ordre : `PRD.md`, `archi-stack.md`,
-`fdd.md`, puis `plan-action.md` — c'est lui qui fait foi sur l'état du
-projet. Vérifie que son état correspond bien au dépôt (historique git) ;
-si tu constates un écart, signale-le moi avant toute chose.
-
-Cas particulier : si le cadrage était inachevé (documents en statut
-« brouillon », ou `plan-action.md` absent), reprends au premier document
-non validé — re-montre-le moi et redemande sa validation — au lieu
-d'entrer dans la boucle.
+Le skill VibeCoding Copilote est à la racine, sous forme de ZIP
+(extrais-le dans son propre dossier) ou de dossier déjà extrait.
+Lis son `SKILL.md` — en particulier la section « Reprise de session » —
+et reprends le chantier là où il s'est arrêté.
 ```
 
 ## La méthode en bref
